@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IgniteApp.Pages.DetailsPage" Title="发布">
+  <StackLayout Margin="10">
+    <Image Source="steve.png" HeightRequest="36" HorizontalOptions="Center"/>
+    <Editor HorizontalOptions="FillAndExpand" Text="{Binding NewMessage}" HeightRequest="200" TextColor="Black"/>
+    <Button Text="发布" HorizontalOptions="FillAndExpand" Command="{Binding SendCommand}" TextColor="White" BackgroundColor="#2196F3"/>
+  </StackLayout>
+</ContentPage>

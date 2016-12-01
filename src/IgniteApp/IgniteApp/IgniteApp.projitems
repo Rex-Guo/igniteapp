@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>74e5c098-6b0a-48dc-9af9-189e47e988fc</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>IgniteApp</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)App.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Feed.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PageModels\DetailsPageModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PageModels\ListPageModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\DetailsPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\ListPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\FeedService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\IFeedService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Pages\DetailsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>
